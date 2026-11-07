@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <title>Kamikaze Robots</title>
 <style>
@@ -60602,5 +60603,12 @@ document.addEventListener('visibilitychange', () => {
 });
 window.__kr = { canvas, fit, press, release, state: gstate, menuItems, tapKey, widgets: () => widgets, rows: () => chipRows, arrows: () => chipArrows, D, E };
 })();
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const tg = window.Telegram.WebApp;
+    tg.ready();
+    tg.expand(); // растянет игру на весь экран телефона
+  });
 </script>
 </body></html>
